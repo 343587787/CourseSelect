@@ -1,75 +1,255 @@
+
+
 <div class="container">
 
 
+
   <div class="row">
-    <div class="col-md-8" style="background-color: #18BC9C;padding-bottom: 10px;padding-top: 10px">
-      <div style="font-size: 50px; padding-left: 50px">
-        <%= image_tag "profile.png" %>
-        Learning RoR!
+
+
+
+    <!-- 轮播 -->
+    <div class="col-md-8" style="padding-bottom: 10px;padding-top: 10px">
+
+    <div id="myCarousel" class="carousel slide">
+
+      <!-- 轮播（Carousel）指标 -->
+
+      <ol class="carousel-indicators">
+        
+
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        
+
+      </ol>
+
+      <!-- 轮播（Carousel）项目 -->
+
+      <div class="carousel-inner">
+
+        <div class="item active">
+
+          <%= link_to image_tag("1.jpg",width: 1280 , height:50), image_path("http://news.ucas.ac.cn/index.php?option=com_content&amp;view=article&amp;id=487599&amp;catid=340&amp;Itemid=176")%>
+
+        </div>
+
+        <div class="item">
+
+          <%= link_to image_tag("2.jpg",width: 1280 , height:50),  image_path("http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=487496&catid=396&Itemid=310")%>
+
+        </div>
+
+        <div class="item">
+
+          <%= link_to image_tag("3.jpg",width: 1280 , height:50), image_path("http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=487436&catid=340&Itemid=176")%>
+
+        </div>
+
       </div>
+
+      <!-- 轮播（Carousel）导航 -->
+
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
 
     </div>
 
-    <div class="col-md-4">
-      <h1>在线选课系统样本</h1>
-      <p>这个样本系统是基于国科大研究生课程(高级软件工程)开发的项目,目的是帮助入门者学习RoR(Ruby on Rails),这是适合新学者的入手的第一个项目</p>
-      <p>入门者可以在这个样本系统上增加更多的功能:</p>
+
+  </div>
+
+  <div class="col-md-4">
+
+      <h1>欢迎来到在线选课系统</h1>
+
+      <p>该系统是基于国科大研究生课程(高级软件工程)开发的项目,具有一些基本的选课功能。</p>
+
+      <p>目前已有的的功能:</p>
+
       <ul>
+        
+      <li class="text-danger">
+
+          多角色登陆（学生，老师，管理员）
+
+        </li>
 
         <li class="text-danger">
-          处理选课冲突、控制选课人数
+
+          学生动态选课，退课
+
         </li>
+
         <li class="text-danger">
-          统计选课学分,增加选课的开放、关闭功能
+
+          老师动态增加，删除课程
+
         </li>
+
         <li class="text-danger">
-          自定义管理员后台
+
+          老师对课程下的学生添加、修改成绩
+
         </li>
+
         <li class="text-danger">
-          基于OAuth的授权登陆
+
+          权限控制：老师和学生只能看到自己相关课程信息
+
         </li>
+
+      </ul>
+
+      <p>将会增加的的功能:</p>
+
+      <ul>
+        
+      <li class="text-danger">
+
+          课程查询
+
+        </li>
+
         <li class="text-danger">
-          Excel格式的数据导入
+
+          学分统计
+
         </li>
+
+        <li class="text-danger">
+
+          课表查看
+
+        </li>
+
+        <li class="text-danger">
+
+          选课冲突处理
+
+        </li>
+        
       </ul>
 
     </div>
 
-  </div>
-
-  <hr>
-
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="alert alert-info text-center">
-        开发此项目,你需要具备以下的知识:
-      </div>
-    </div>
 
   </div>
+
 
 
   <div class="row">
-    <div class="col-md-4">
-      <h2>Bootstrap</h2>
-      <p>Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷. 它由Twitter的设计师Mark
-        Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。</p>
-      <a class="btn btn-info" href="http://www.w3schools.com/bootstrap/">More Info</a>
+
+
+
+  <!-- 通知 -->
+
+    <div class="col-md-7" style="padding-bottom: 10px;padding-top: 10px">
+
+      <div id="home-news">
+
+      <div class="panel">
+
+        <div class="panel-head s2">
+
+          <blockquote>
+
+            <h3 class="panel2-head-title"><strong><span>最新通知</span></strong></h3>
+
+          </blockquote>
+
+        </div>
+
+        <div class="panel-body" style="height:350px;">
+
+          <ul class="home-news-list" id="xwjj">
+
+					   
+						<li>
+							<a title="中国科学院大学2018年度学位授予仪式视频及照片浏览下载通知" href="http://www.ucas.ac.cn/site/157?u=66389" target="_blank" }="">中国科学院大学2018年度学位授予仪式视频及照片浏览下载通知</a>
+							<span class="date">(09.07)</span>
+							<p>各研究所:中国科学院大学于7月6日举行的2018年度学位授予仪式全程视频和每组照片已编辑完成，视频在线浏览及下载地址为<a href="http://www.ucas.ac.cn/site/157?u=66389" target="_blank" }="">（详情……）</a></p>
+						</li>
+					   
+						<li>
+							<a title="中国科学院大学教学科研岗位人才招聘" href="http://www.ucas.ac.cn/site/157?u=63463" target="_blank" }="">"中国科学院大学教学科研岗位人才招聘</a>
+							<span class="date">(03.21)</span>
+							<p>中国科学院大学（英文名 ：University of Chinese Academy of Sciences,简称“国科大”,主页：www.ucas.ac.cn），是国家教育部正式批准成立的一所以研究生教育为主的科教融合、独具特色的高等学校。国科大正值迅速发展阶段，现面向海内外招聘各相关领域的各类优秀人才。<a href="http://www.ucas.ac.cn/site/157?u=63463" target="_blank" }="">（详情……）</a></p>
+						</li>
+					   
+						<li>
+							<a title="中国科学院大学关于启用学生成绩专用章的通知" href="http://www.ucas.ac.cn/site/157?u=66599" target="_blank" }="">中国科学院大学关于启用学生成绩专用章的通知</a>
+							<span class="date">(10.23)</span>
+							<p>自2018年10月24日起，中国科学院大学开始启用学生成绩专用章。研究生和本科生成绩单分别由教务部和本科部办理。具体办理时间和地点，详见教务部和本科部网站上的通知公告。<a href="http://www.ucas.ac.cn/site/157?u=66599" target="_blank" }="">（详情……）</a></p>
+						</li>
+					   
+						<li>
+							<a title="关于预约参观中国科学院与“两弹一星”纪念馆的公告" href=http://www.ucas.ac.cn/site/157?u=66600" target="_blank" }="">关于预约参观中国科学院与“两弹一星”纪念馆的公告</a>
+							<span class="date">(10.22)</span>
+							<p>中国科学院与“两弹一星”纪念馆自2015年9月12日面向公众免费开放以来，社会反响良好，随着参观人数逐年激增，现已超过本馆单日接待承载量。为确保参观人员人身安全，提高参观质量，现就有关事项公告如下:<a href="http://www.ucas.ac.cn/site/157?u=66600" target="_blank" }="">（详情……）</a></p>
+						</li>
+					   
+					
+				</ul>
+
+          </ul>
+
+        </div><!-- // panel-body:end -->
+
+
+
+      </div><!-- // panel:end -->
+
     </div>
 
-    <div class="col-md-4">
-      <h2>Javascript/CSS</h2>
-      <p>JavaScript一种直译式脚本语言,广泛用于客户端的脚本语言,是一种动态类型、弱类型、基于原型的语言，内置支持类型，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。CSS
-        (Cascading Style Sheets)是一种用来表现HTML样式的样式语言,能够真正做到网页表现与内容分离。
-      </p>
-      <a class="btn btn-info" href="http://www.runoob.com/js/js-tutorial.html">More Info</a>
     </div>
 
-    <div class="col-md-4">
-      <h2>Rails Framework</h2>
-      <p>Rails基于MVC（模型- 视图- 控制器）设计模式。从视图中的Ajax应用，到控制器中的访问请求和反馈，到封装数据库的模型，Rails
-        为你提供一个纯Ruby的开发环境,它基于一种计算机软件语言Ruby,给程序开发人员提供了强大的框架支持。Rails结合了PHP体系的优点（快速开发）和Java体系的优点（程序规整）</p>
-      <a class="btn btn-info" href="http://guides.ruby-china.org/">More Info</a>
-    </div>
+
+
+  <!-- 快捷通道 -->
+
+    <div class="col-md-5" style="padding-bottom: 10px;padding-top: 10px">
+
+      <div id="home-qlink">
+
+    <blockquote>
+
+     <h3> <strong><span>快速通道</span></strong></h3>
+
+      </blockquote>
+
+      <div class="panel-body">
+
+        <%=image_tag "kslj.png", {usemap:"#Map5"}%>
+
+        <map name="Map5">
+
+          <area shape="rect" coords="6,8,94,227" href="http://service.ucas.ac.cn/" target="_blank" title="校园服务">
+
+          <area shape="rect" coords="108,9,334,100" href="http://sep.ucas.ac.cn/" target="_blank" title="信息门户">
+
+          <area shape="rect" coords="350,7,426,154" href="http://job.ucas.ac.cn/" target="_blank" title="就业信息">
+
+          <area shape="rect" coords="108,106,333,155" href="http://www.cas.cn/" target="_blank" title="中国科学院">
+
+          <area shape="rect" coords="110,170,235,224" href="http://lib.ucas.ac.cn/" target="_blank" title="图书馆">
+
+          <area shape="rect" coords="251,172,420,227" href="/site/229" target="_blank" title="校长信箱">
+
+        </map>
+
+      </div><!-- // panel-body:end -->
+
   </div>
-</div>
+
+    </div>
+
+  </div>
+
+
+
+  </div>
